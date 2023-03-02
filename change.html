@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>修改信息</h1>
+    <h2>请输入姓名和修改内容</h2>
+    <form action="/cgi-bin/change.py" method="get">
+        <table>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td><input type="radio" name="sex" value="male">男<br>
+                    <input type="radio" name="sex" value="female">女
+                </td>
+
+            </tr>
+            <tr>
+                <td>年龄</td>
+                <td><input type="number" name="age" oninput="value=value.replace(/[^\d]/g,'')"></td>
+            </tr>
+            <tr>
+                <td>电话：</td>
+                <td><input type="tel" name="tel"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="提交">
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p><a href="/index.html">back</a></p>
+</body>
+
+</html>
